@@ -1,0 +1,76 @@
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+.nothidden{
+    visibility: visible;
+    opacity: 1;
+    .drawler{
+        transform: translateX(0);
+    }
+}
+
+  .drawler {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    position: absolute;
+    width: 420px;
+    right: 0;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+    h2 {
+      margin: 0;
+    }
+    .Items {
+      margin-bottom: 40px;
+      overflow: auto;
+    }
+
+  }
+  .PreItems{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: auto;
+  }
+  .cartItem {
+    border: 1px solid #f3f3f3;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
+    .cartItemImg {
+      width: 70px;
+      height: 70px;
+      background-size: contain;
+      background-position: 0 -2px;
+      background-repeat: no-repeat;
+      margin-right: 20px;
+    }
+    p {
+      font-size: 16px;
+      margin: 0;
+    }
+    b {
+      font-size: 14px;
+    }
+  }
+  .removeBTN {
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
