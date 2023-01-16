@@ -140,6 +140,9 @@ function App() {
           />
         </Routes>
       </div>
+      <div>
+        Ya Dimash
+      </div>
     </AppContext.Provider>
   );
 }
